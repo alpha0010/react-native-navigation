@@ -7,6 +7,7 @@ import testIDs from '../testIDs';
 import Screens from './Screens';
 import Navigation from '../services/Navigation';
 import { stack } from '../commons/Layouts';
+import { View } from 'react-native';
 
 const {
   WELCOME_SCREEN_HEADER,
@@ -33,6 +34,7 @@ export default class LayoutsScreen extends NavigationComponent {
   }
 
   render() {
+    return <View style={{flex: 1, backgroundColor: '#96010F'}} />;
     return (
       <Root componentId={this.props.componentId}>
         <Button label="Stack" testID={STACK_BTN} onPress={this.stack} />
